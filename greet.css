@@ -8,7 +8,7 @@
 }
 @font-face {
     font-family: "greet";
-    src: url("/comic-lemon-font/ComicLemon-mLx6V.ttf")
+    src: url("comic-lemon-font/ComicLemon-mLx6V.ttf")
 }
 body{
     background: -webkit-linear-gradient(#FFFCE8,#E5F2C9);
