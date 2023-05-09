@@ -1,0 +1,48 @@
+:root {
+    --red: #DD403A;
+    --prp:#3E363F;
+    --ivory:#FFFCE8;
+    --drk:#1F0318;
+    --greyish:#E5F2C9;
+
+}
+@font-face {
+    font-family: "greet";
+    src: url("/comic-lemon-font/ComicLemon-mLx6V.ttf")
+}
+body{
+    background: -webkit-linear-gradient(#FFFCE8,#E5F2C9);
+}
+h1{
+font-size: 100px;
+font-family: "greet";
+}
+form{
+    font-family: "greet";
+    font-size: 60px;
+}
+.nameText{
+    font-size: 50px;
+}
+.greetMeBtn{
+    font-size: 20px;
+}
+span{
+    font-size: 70px;
+    font-family: "greet";
+}
+
+button{
+    margin-top: 1em;
+}
+.counter{
+    /* padding-left: 9em; */
+    font-size: 2em;
+}
+.language{
+    font-size: 1em;
+}
+
+.languageBTN{
+    padding-top: 4em;
+}
