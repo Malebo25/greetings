@@ -3,7 +3,7 @@ const greetButton = document.querySelector(".greetMeBtn");
 const greeter = document.querySelector(".greetUserName");
 const chooseLanguage = document.querySelector(".languageType");
 const counter = document.querySelector(".counter");
-
+const reseter = document.querySelector(".resetBtn");
 greetMyUser = greetMe();
 
 var greetingsCounter = 0;
@@ -62,4 +62,12 @@ greetButton.addEventListener("click", function () {
   counter.innerHTML = greetingsCounter;
 
   userInput.value = "";
+});
+reseter.addEventListener("click", function () {
+  greetingsCounter = 0;
+  namesGreeted = {};
+  counter.innerHTML = 0;
+  greeter.innerHTML = "";
+  radio.checked = false;
+
 });
