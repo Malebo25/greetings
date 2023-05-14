@@ -11,7 +11,7 @@ greetButton.addEventListener('click', function () {
       "input[name='languagetype']:checked"
     );
     let userLanguage = checkedLanguageBtn.value;
-
+    
     var chosenLanguage = userLanguage;
     if (typeof userInput.value==="string") {
         
@@ -24,8 +24,8 @@ greetButton.addEventListener('click', function () {
         }
         else if (chosenLanguage === "isixhosa") {
             greeter.innerHTML = greetMyUser.greetXhosa(
-              userInput.value.toLowerCase()
-            );
+                userInput.value.toLowerCase()
+                );
             userInput.value = "";
             
         }
@@ -41,18 +41,18 @@ greetButton.addEventListener('click', function () {
     counter.innerHTML = greetMyUser.getCounter();
 
     // var namesGreeted = {};
-
+    
     // //when the greet button is pressed check if this user was already greeted before
     // //by looking if the userName exists in namesGreeted if not increment this counter and update the screen
     // if (namesGreeted[userInput.value.toLowerCase()] === undefined) {
-    //   counter.value++;
+        //   counter.value++;
     //   //add an entry for the user that was greeted in the Object Map
     //   namesGreeted[userInput.value.toLowerCase()] = 1;
     // } else {
-    //   // update the counter for a specific username
+        //   // update the counter for a specific username
     //   namesGreeted[userInput.value.toLowerCase()]++;
     // }
     // //update the DOM to display the counter
     // greetingsElem.innerHTML = greetingsCounter;
-
+    
 });

@@ -28,7 +28,7 @@ function greetMe() {
         greetUser,
         greetTswana,
         greetXhosa,
-      greetEnglish,
+        greetEnglish,
         getCounter,
     }
     

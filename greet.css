@@ -10,12 +10,16 @@
     font-family: "greet";
     src: url("comic-lemon-font/ComicLemon-mLx6V.ttf")
 }
+@font-face {
+    font-family: "flowers";
+    src: url("/flowers-font/Flowers-YlzO.ttf")
+}
 body{
     background: -webkit-linear-gradient(#FFFCE8,#E5F2C9);
 }
 h1{
-font-size: 100px;
-font-family: "greet";
+font-size: 60px;
+font-family: "flowers";
 }
 form{
     font-family: "greet";
@@ -28,7 +32,7 @@ form{
     font-size: 20px;
 }
 span{
-    font-size: 70px;
+    font-size: 50px;
     font-family: "greet";
 }
 
@@ -45,4 +49,10 @@ button{
 
 .languageBTN{
     padding-top: 4em;
+}
+.nameText{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
 }
