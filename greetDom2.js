@@ -8,20 +8,11 @@ greetMyUser = greetMe();
 
 var greetingsCounter = 0;
 var namesGreeted = {};
+counter.innerHTML = localStorage.getItem("numberOfGreetings");
 greetButton.addEventListener("click", function () {
   var checkedLanguageBtn = document.querySelector(
     "input[name='languagetype']:checked"
-  );
-
-  // if (checkedLanguageBtn ||5 userName !== "") {
-    
-  //   if (checkedLanguageBtn) {
-
-  //   }
-
-  // } else {
-  //   alert("enter both");
-  // }
+    );
 
 
   let userName = userInput.value.toLowerCase();
@@ -57,9 +48,11 @@ greetButton.addEventListener("click", function () {
     // update the counter for a specific username
     namesGreeted[userInput.value.toLowerCase()]++;
   }
-  //update the DOM to display the counter
+  localStorage.setItem('numberOfGreetings', greetingsCounter);
+  localStorage.getItem('numberOfGreetings');
+  counter.innerHTML = localStorage.getItem("numberOfGreetings");
 
-  counter.innerHTML = greetingsCounter;
+
 
   userInput.value = "";
 });
@@ -69,5 +62,6 @@ reseter.addEventListener("click", function () {
   counter.innerHTML = 0;
   greeter.innerHTML = "";
   radio.checked = false;
+  userInput.value = "";
 
 });
