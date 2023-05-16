@@ -50,7 +50,7 @@ describe("Tesing Greetings in different languages", function () {
   it("It should not greet names that contain numbers", function () {
     test.greetUser("mm99", "isixhosa");
 
-    assert.equal(1, test.getCounter());
+    assert.equal(0, test.getCounter());
   });
    
 });

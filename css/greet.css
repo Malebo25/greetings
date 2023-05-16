@@ -8,7 +8,7 @@
 }
 @font-face {
     font-family: "greet";
-    src: url("comic-lemon-font/ComicLemon-mLx6V.ttf")
+    src: url("/comic-lemon-font/ComicLemon-mLx6V.ttf")
 }
 @font-face {
     font-family: "flowers";
@@ -29,7 +29,11 @@ form{
     font-size: 50px;
 }
 .greetMeBtn{
-    font-size: 20px;
+    font-size: 50px;
+}
+.resetBtn{
+    font-size: 50px;
+    background-color: #DD403A;
 }
 span{
     font-size: 50px;
@@ -38,6 +42,7 @@ span{
 
 button{
     margin-top: 1em;
+    border-radius: 2em;
 }
 .counter{
     /* padding-left: 9em; */
