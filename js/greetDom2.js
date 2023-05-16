@@ -6,32 +6,40 @@ const counter = document.querySelector(".counter");
 const reseter = document.querySelector(".resetBtn");
 
 
-
 greetMyUser = greetMe(localStorage.getItem("numberOfGreetings"));
 
 counter.innerHTML = localStorage.getItem("numberOfGreetings");
 greetButton.addEventListener("click", function () {
+  greeter.classList.remove("danger");
   var checkedLanguageBtn = document.querySelector(
     "input[name='languagetype']:checked"
   );
 
   let userName = userInput.value.toLowerCase();
-  if (checkedLanguageBtn !== null) {
+  if (checkedLanguageBtn !== null ) {
     let userLanguage = checkedLanguageBtn.value;
 
     greeter.innerHTML = greetMyUser.greetUser(userName, userLanguage);
-  } else if (checkedLanguageBtn === null) {
-    greeter.innerHTML = "Please enter name and language";
-    chooseLanguage.checked = false;
+   } else if (checkedLanguageBtn === null ) {
+  //   greeter.innerHTML = greetMyUser.error(userName, checkedLanguageBtn.value);
+  greeter.innerHTML = greetMyUser.error(userName, checkedLanguageBtn);
+  greeter.classList.add("danger");
+  
   }
+  else if (userName === "") {
+    greeter.innerHTML = greetMyUser.error(userName, checkedLanguageBtn);
+    
+  }
+  
 
   
-  greetMyUser.namesAndCounter(userName, checkedLanguageBtn.value);
+  greetMyUser.namesAndCounter(userName, checkedLanguageBtn);
   localStorage.setItem("numberOfGreetings", greetMyUser.getCounter());
   localStorage.getItem("numberOfGreetings");
   counter.innerHTML = localStorage.getItem("numberOfGreetings");
   
   userInput.value = "";
+  chooseLanguage.checked = false;
 });
 reseter.addEventListener("click", function () {
   localStorage.clear();

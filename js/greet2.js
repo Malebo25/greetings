@@ -4,6 +4,10 @@ function greetMe(myCounter) {
   var namesGreeted = {};
   var user;
   function greetUser(userName, language) {
+    if (!userName && language) {
+      return "<span style='color: red;'>Please enter Name and Language</span>";
+      
+    }
     if (userName && language) {
      
       if (patternCheck.test(userName)) {
@@ -15,15 +19,19 @@ function greetMe(myCounter) {
           return "Molo " + userName;
         }
       } else {
-        return "Please enter valid name (letters only) and choose language";
+        return "<span style='color: red;'>Please enter valid name (letters only) and choose language</span>";
       }
-    } else if (userName === "" && language === false) {
+    } 
+  }
+  function error(userName, language) {
+    
+    if (userName === "" && language === null) {
       return "Please enter valid name and choose language";
-    } else if (userName === "" && language !== false) {
-      return "Please enter name";
-    } else if (userName !== "" && language === false) {
-      return "Please enter language";
-    }
+     } else if (!userName && language) {
+       return "Please enter name";
+     } else if (userName !== "" && language === null) {
+       return "Please enter name and language";
+     } 
   }
   function namesAndCounter(userName,language) {
     var pattern = /[a-zA-Z]+/g;
@@ -63,5 +71,6 @@ function greetMe(myCounter) {
     namesAndCounter,
     getCounter,
     getNamesGreeted,
-  };
+    error,
+  }
 }

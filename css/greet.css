@@ -29,18 +29,20 @@ form{
     font-size: 50px;
 }
 .greetMeBtn{
-    font-size: 50px;
+    margin-right: 1rem;
+    font-size: 35px;
 }
 .resetBtn{
-    font-size: 50px;
+    font-size: 35px;
     background-color: #DD403A;
 }
 span{
-    font-size: 50px;
+    font-size: 30px;
     font-family: "greet";
 }
 
 button{
+    
     margin-top: 1em;
     border-radius: 2em;
 }
@@ -60,4 +62,11 @@ button{
     justify-content: center;
     text-align: center;
     width: 100%;
+}
+.danger{
+    color: red;
+}
+
+.greetUserName{
+    font-size: 30px;
 }
