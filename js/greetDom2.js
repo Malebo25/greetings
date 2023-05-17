@@ -25,6 +25,7 @@ greetButton.addEventListener("click", function () {
   greeter.innerHTML = greetMyUser.error(userName, checkedLanguageBtn);
   greeter.classList.add("danger");
   
+  
   }
   else if (userName === "") {
     greeter.innerHTML = greetMyUser.error(userName, checkedLanguageBtn);
