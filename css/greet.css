@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "flowers";
-  src: url("./flowers-font/Flowers-YlzO.ttf");
+  src: url("./flowers-font/Flowers-YlzO.ttf")
 }
 body {
   background: -webkit-linear-gradient(#fffce8, #e5f2c9);
@@ -83,17 +83,18 @@ button:hover {
   font-size: 2em;
 }
 
-@media(min-width:800px){
+@media(min-width:600px){
   .row{
     padding-top: 5em;
   }
   .languageBTN label {
-    width: 100%; 
-    margin-left: 500em; 
+    width: 96.5%;
+    /* padding-right:680px ;  */
+    
   }
 
   .myBTN{
-    padding-left: 2em;
+    /* padding-left: 2em; */
   }
    
    

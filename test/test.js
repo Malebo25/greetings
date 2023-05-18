@@ -64,7 +64,7 @@ describe("Testing User Errors", function () {
     let Usertest = greetMe();
 
     assert.equal(
-      "Please enter name and language",
+      "Please enter language",
       Usertest.error("Nora", null)
     );
   });
