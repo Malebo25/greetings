@@ -1,78 +1,86 @@
 :root {
-    --red: #DD403A;
-    --prp:#3E363F;
-    --ivory:#FFFCE8;
-    --drk:#1F0318;
-    --greyish:#E5F2C9;
-
+  --red: #dd403a;
+  --prp: #3e363f;
+  --ivory: #fffce8;
+  --drk: #1f0318;
+  --greyish: #e5f2c9;
 }
 @font-face {
-    font-family: "greet";
-    src: url("comic-lemon-font/ComicLemon-mLx6V.ttf")
+  font-family: "greet";
+  src: url("comic-lemon-font/ComicLemon-mLx6V.ttf");
 }
 @font-face {
-    font-family: "flowers";
-    src: url("flowers-font/Flowers-YlzO.ttf")
+  font-family: "flowers";
+  src: url("flowers-font/Flowers-YlzO.ttf");
 }
-body{
-    background: -webkit-linear-gradient(#FFFCE8,#E5F2C9);
+body {
+  background: -webkit-linear-gradient(#fffce8, #e5f2c9);
 }
-h1{
-font-size: 3rem;
-font-family: "flowers";
+h1 {
+  font-size: 3rem;
+  font-family: "flowers";
 }
-form{
-    font-family: "greet";
-    font-size: 1rem;
+form {
+  font-family: "greet";
+  font-size: 1rem;
 }
-.nameText{
-    font-size: 50px;
+.nameText {
+  font-size: 50px;
 }
-.greetMeBtn{
-    margin-right: 0.1rem;
-    font-size: 20px;
+.greetMeBtn {
+  margin-right: 0.1rem;
+  font-size: 20px;
 }
-.resetBtn{
-    font-size: 20px;
-    background-color: #DD403A;
+.resetBtn {
+  font-size: 20px;
+  background-color: #dd403a;
 }
-span{
-    font-size: 25px;
-    font-family: "greet";
-}
-
-.button{
-    
-    margin-top: 1em;
-    transition-duration: 0.4s;
-    
-}
-.button:hover {
-    background-color: #4CAF50;
-   
-    color: white;
-}
-.counter{
-    
-    font-size: 1.7em;
-}
-.language{
-    font-size: 1em;
+span {
+  font-size: 25px;
+  font-family: "greet";
 }
 
-.languageBTN{
-    padding-top: 4em;
+button {
+  margin-top: 1em;
+  transition-duration: 0.4s;
+
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #3e363f;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.4s;
 }
-.nameText{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
+button:hover {
+  background-color: lightslategray;
+
+  color: white;
 }
-.danger{
-    color: red;
+.counter {
+  font-size: 1.7em;
+}
+.language {
+  font-size: 1em;
 }
 
-.greetUserName{
-    font-size: 2em;
+.languageBTN {
+  padding-top: 4em;
+}
+.nameText {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+.danger {
+  color: red;
+}
+
+.greetUserName {
+  font-size: 2em;
 }
