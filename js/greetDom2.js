@@ -46,7 +46,9 @@ greetButton.addEventListener("click", function () {
   counter.innerHTML = localStorage.getItem("numberOfGreetings");
 
   userInput.value = "";
-  chooseLanguage.checked = false;
+  if (checkedLanguageBtn !== null) {
+    checkedLanguageBtn.checked = false;
+  }
 });
 reseter.addEventListener("click", function () {
   localStorage.clear();

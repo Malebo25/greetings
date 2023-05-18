@@ -5,13 +5,10 @@
   --drk: #1f0318;
   --greyish: #e5f2c9;
 }
-@font-face {
-  font-family: "greet";
-  src: url("comic-lemon-font/ComicLemon-mLx6V.ttf");
-}
+
 @font-face {
   font-family: "flowers";
-  src: url("flowers-font/Flowers-YlzO.ttf");
+  src: url("./flowers-font/Flowers-YlzO.ttf");
 }
 body {
   background: -webkit-linear-gradient(#fffce8, #e5f2c9);
@@ -84,4 +81,20 @@ button:hover {
 
 .greetUserName {
   font-size: 2em;
+}
+
+@media(min-width:800px){
+  .row{
+    padding-top: 4em;
+  }
+  .languageBTN label {
+    width: 100%; 
+    margin-left: 500em; 
+  }
+
+  .myBTN{
+    padding-left: 2em;
+  }
+   
+   
 }
