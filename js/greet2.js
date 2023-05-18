@@ -17,7 +17,7 @@ function greetMe(myCounter) {
           return "Molo " + userName;
         }
       } else {
-        return error(userName,language,)
+        return error(userName,language)
       }
     }
     else {
@@ -29,12 +29,10 @@ function greetMe(myCounter) {
       return "Please enter name";
     }
 
-    if (userName === "" && language === null) {
+    else if (userName === "" && language === null) {
       return "Please enter valid name and choose language";
-      // } else if (!userName && language) {
-      //   return "Please enter name";
     } else if (userName !== "" && language === null) {
-      return "Please enter name and language";
+      return "Please enter language";
     } else if (patternCheck.test(userName) === false) {
       return "Please enter valid name(letters)";
     }

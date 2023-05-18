@@ -24,9 +24,7 @@ form {
   font-family: "greet";
   font-size: 1rem;
 }
-.nameText {
-  font-size: 50px;
-}
+
 .greetMeBtn {
   margin-right: 0.1rem;
   font-size: 20px;
@@ -66,6 +64,8 @@ button:hover {
 }
 .language {
   font-size: 1em;
+  
+  
 }
 
 .languageBTN {
@@ -75,7 +75,8 @@ button:hover {
   display: flex;
   justify-content: center;
   text-align: center;
-  width: 100%;
+  width: 70%;
+  font-size: 2em;
 }
 .danger {
   color: red;
