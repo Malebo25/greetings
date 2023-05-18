@@ -85,7 +85,7 @@ button:hover {
 
 @media(min-width:800px){
   .row{
-    padding-top: 4em;
+    padding-top: 5em;
   }
   .languageBTN label {
     width: 100%; 
