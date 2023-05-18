@@ -86,12 +86,15 @@ describe("Counting Greetings in different languages", function () {
     assert.equal(0, test.getCounter());
   });
   it("It should not count names that contain numbers", function () {
-    test.greetUser("mm", "isixhosa");
+    let test = greetMe();
+    test.namesAndCounter("mm", "isixhosa");
+    test.namesAndCounter("mm56", "isixhosa");
 
-    assert.equal(0, test.getCounter());
+    assert.equal(1, test.getCounter());
   });
 
   it("It should not count empty names", function () {
+    let test = greetMe();
     test.namesAndCounter('', "isixhosa");
 
     assert.equal(0, test.getCounter());
@@ -104,7 +107,8 @@ describe("Counting Greetings in different languages", function () {
      test2.namesAndCounter("lisa", "isixhosa");
      test2.namesAndCounter("james", "isixhosa");
      test2.namesAndCounter("refiloe", "isixhosa");
-     test2.namesAndCounter("kyle", "isixhosa");
+    test2.namesAndCounter("kyle", "isixhosa");
+    test2.namesAndCounter("", "isixhosa");
 
     assert.equal(4, test2.getCounter());
     

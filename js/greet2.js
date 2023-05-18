@@ -4,9 +4,9 @@ function greetMe(myCounter) {
   var namesGreeted = {};
   var user;
   function greetUser(userName, language) {
-    if (!userName && language) {
-      return "<span style='color: red;'>Please enter Name and Language</span>";
-    }
+    // if (!userName && language) {
+    //   return "Please enter Name and Language";
+    // }
     if (userName && language) {
       if (patternCheck.test(userName)) {
         if (language === "english") {
@@ -17,15 +17,22 @@ function greetMe(myCounter) {
           return "Molo " + userName;
         }
       } else {
-        return "<span style='color: red;'>Please enter valid name (letters only) and choose language</span>";
+        return error(userName,language,)
       }
+    }
+    else {
+      return error(userName,language);
     }
   }
   function error(userName, language) {
+    if (!userName && language) { 
+      return "Please enter name";
+    }
+
     if (userName === "" && language === null) {
       return "Please enter valid name and choose language";
-    } else if (!userName && language) {
-      return "Please enter name";
+      // } else if (!userName && language) {
+      //   return "Please enter name";
     } else if (userName !== "" && language === null) {
       return "Please enter name and language";
     } else if (patternCheck.test(userName) === false) {

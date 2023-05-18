@@ -18,37 +18,43 @@ body{
     background: -webkit-linear-gradient(#FFFCE8,#E5F2C9);
 }
 h1{
-font-size: 60px;
+font-size: 3rem;
 font-family: "flowers";
 }
 form{
     font-family: "greet";
-    font-size: 60px;
+    font-size: 1rem;
 }
 .nameText{
     font-size: 50px;
 }
 .greetMeBtn{
-    margin-right: 1rem;
-    font-size: 35px;
+    margin-right: 0.1rem;
+    font-size: 20px;
 }
 .resetBtn{
-    font-size: 35px;
+    font-size: 20px;
     background-color: #DD403A;
 }
 span{
-    font-size: 30px;
+    font-size: 25px;
     font-family: "greet";
 }
 
-button{
+.button{
     
     margin-top: 1em;
-    border-radius: 2em;
+    transition-duration: 0.4s;
+    
+}
+.button:hover {
+    background-color: #4CAF50;
+   
+    color: white;
 }
 .counter{
-    /* padding-left: 9em; */
-    font-size: 2em;
+    
+    font-size: 1.7em;
 }
 .language{
     font-size: 1em;
@@ -68,5 +74,5 @@ button{
 }
 
 .greetUserName{
-    font-size: 30px;
+    font-size: 2em;
 }

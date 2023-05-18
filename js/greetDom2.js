@@ -4,6 +4,7 @@ const greeter = document.querySelector(".greetUserName");
 const chooseLanguage = document.querySelector(".languageType");
 const counter = document.querySelector(".counter");
 const reseter = document.querySelector(".resetBtn");
+var letters = /^[a-zA-Z]+$/;
 
 
 greetMyUser = greetMe(localStorage.getItem("numberOfGreetings"));
@@ -16,21 +17,32 @@ greetButton.addEventListener("click", function () {
   );
 
   let userName = userInput.value.toLowerCase();
-  if (checkedLanguageBtn !== null ) {
+
+  let name = userName.charAt(0).toUpperCase() + userName.slice(1);
+  if (!userName && checkedLanguageBtn) {
     let userLanguage = checkedLanguageBtn.value;
 
-    greeter.innerHTML = greetMyUser.greetUser(userName, userLanguage);
+    greeter.innerHTML = greetMyUser.greetUser(name, userLanguage);
+    greeter.classList.add("danger");
+  }
+  else if (letters.test(userName) === false) {
+    let userLanguage = checkedLanguageBtn.value;
+
+    greeter.innerHTML = greetMyUser.greetUser(name, userLanguage);
+    greeter.classList.add("danger");
+  }
+
+  else if (checkedLanguageBtn !== null ) {
+    let userLanguage = checkedLanguageBtn.value;
+
+    greeter.innerHTML = greetMyUser.greetUser(name, userLanguage);
    } else if (checkedLanguageBtn === null ) {
-  //   greeter.innerHTML = greetMyUser.error(userName, checkedLanguageBtn.value);
-  greeter.innerHTML = greetMyUser.error(userName, checkedLanguageBtn);
+ 
+  greeter.innerHTML = greetMyUser.error(name, checkedLanguageBtn);
   greeter.classList.add("danger");
   
-  
   }
-  else if (userName === "") {
-    greeter.innerHTML = greetMyUser.error(userName, checkedLanguageBtn);
-    
-  }
+ 
   
 
   
@@ -44,10 +56,7 @@ greetButton.addEventListener("click", function () {
 });
 reseter.addEventListener("click", function () {
   localStorage.clear();
-  // namesGreeted = {};
-  // counter.innerHTML = 0;
-  // greeter.innerHTML = "";
+  
   location.reload();
-  // chooseLanguage.checked = false;
-  // userInput.value = "";
+  
 });
