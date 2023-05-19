@@ -24,11 +24,17 @@ greetButton.addEventListener("click", function () {
 
     greeter.innerHTML = greetMyUser.greetUser(name, userLanguage);
     greeter.classList.add("danger");
+     setTimeout(function () {
+       greeter.innerHTML = "";
+     }, 3000);
   } else if (letters.test(userName) === false) {
     let userLanguage = checkedLanguageBtn;
 
     greeter.innerHTML = greetMyUser.greetUser(name, userLanguage);
     greeter.classList.add("danger");
+     setTimeout(function () {
+       greeter.innerHTML = "";
+     }, 3000);
   } else if (checkedLanguageBtn !== null) {
     let userLanguage = checkedLanguageBtn.value;
 
@@ -36,9 +42,17 @@ greetButton.addEventListener("click", function () {
   } else if (checkedLanguageBtn === null) {
     greeter.innerHTML = greetMyUser.error(name, checkedLanguageBtn);
     greeter.classList.add("danger");
+     setTimeout(function () {
+       greeter.innerHTML = "";
+     }, 3000);
+
   } else if (checkedLanguageBtn === null && !userName) {
     greeter.innerHTML = greetMyUser.error(name, checkedLanguageBtn);
     greeter.classList.add("danger");
+    setTimeout(function () {
+      greeter.innerHTML = "";
+     
+    }, 3000);
   }
 
   greetMyUser.namesAndCounter(userName, checkedLanguageBtn);
