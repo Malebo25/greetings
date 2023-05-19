@@ -16,6 +16,7 @@ body {
 h1 {
   font-size: 3rem;
   font-family: "flowers";
+  
 }
 form {
   font-family: "greet";
@@ -64,9 +65,11 @@ button:hover {
   
   
 }
-
+.textbox{
+  
+}
 .languageBTN {
-  padding-top: 4em;
+  padding-top: 1em;
 }
 .nameText {
   display: flex;
@@ -74,18 +77,21 @@ button:hover {
   text-align: center;
   width: 30%;
   font-size: 2em;
+  
 }
 .danger {
   color: red;
 }
-
+.success{
+  color: green;
+}
 .greetUserName {
   font-size: 2em;
 }
 
 @media(min-width:600px){
   .row{
-    padding-top: 5em;
+    padding-top: 0.5em;
   }
   .languageBTN label {
     width: 96.5%;

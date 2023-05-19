@@ -8,9 +8,10 @@ var letters = /^[a-zA-Z]+$/;
 
 greetMyUser = greetMe(localStorage.getItem("numberOfGreetings"));
 
-counter.innerHTML = localStorage.getItem("numberOfGreetings");
+counter.innerHTML = localStorage.getItem("numberOfGreetings")||0;
 greetButton.addEventListener("click", function () {
   greeter.classList.remove("danger");
+  greeter.classList.remove("success");
   var checkedLanguageBtn = document.querySelector(
     "input[name='languagetype']:checked"
   );
@@ -50,8 +51,32 @@ greetButton.addEventListener("click", function () {
     checkedLanguageBtn.checked = false;
   }
 });
-reseter.addEventListener("click", function () {
-  localStorage.clear();
 
+if (localStorage.getItem("resetSuccess")) {
+  greeter.innerHTML = "Reset Success!";
+  greeter.classList.add("success");
+
+  setTimeout(function () {
+    greeter.innerHTML = "";
+    localStorage.removeItem("resetSuccess");
+  }, 3000);
+  counter.innerHTML = "";
+}
+reseter.addEventListener("click", function () {
+  localStorage.removeItem("numberOfGreetings");
+  localStorage.setItem("resetSuccess", true);
   location.reload();
 });
+// reseter.addEventListener("click", function () {
+//   alert("This reset button will clear all your data");
+//   localStorage.removeItem("numberOfGreetings");
+//   counter.innerHTML = 0;
+//   location.reload();
+//   greeter.innerHTML = "Reset Success!"
+//   greeter.classList.add("success");
+
+  
+//   setTimeout(function () {
+//     greeter.innerHTML = "";
+//   }, 3000); 
+// });
