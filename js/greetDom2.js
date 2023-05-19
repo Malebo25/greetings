@@ -39,6 +39,10 @@ greetButton.addEventListener("click", function () {
     let userLanguage = checkedLanguageBtn.value;
 
     greeter.innerHTML = greetMyUser.greetUser(name, userLanguage);
+    setTimeout(function () {
+      greeter.innerHTML = "";
+    }, 8000);
+
   } else if (checkedLanguageBtn === null) {
     greeter.innerHTML = greetMyUser.error(name, checkedLanguageBtn);
     greeter.classList.add("danger");
