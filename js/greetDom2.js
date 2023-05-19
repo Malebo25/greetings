@@ -8,7 +8,7 @@ var letters = /^[a-zA-Z]+$/;
 
 greetMyUser = greetMe(localStorage.getItem("numberOfGreetings"));
 
-counter.innerHTML = localStorage.getItem("numberOfGreetings")||0;
+counter.innerHTML = localStorage.getItem("numberOfGreetings");
 greetButton.addEventListener("click", function () {
   greeter.classList.remove("danger");
   greeter.classList.remove("success");
@@ -52,31 +52,16 @@ greetButton.addEventListener("click", function () {
   }
 });
 
-if (localStorage.getItem("resetSuccess")) {
+reseter.addEventListener("click", function () {
+  alert("This reset button will clear all your data");
+
   greeter.innerHTML = "Reset Success!";
   greeter.classList.add("success");
+  localStorage.removeItem("numberOfGreetings");
 
   setTimeout(function () {
     greeter.innerHTML = "";
-    localStorage.removeItem("resetSuccess");
+    location.reload();
   }, 3000);
   counter.innerHTML = "";
-}
-reseter.addEventListener("click", function () {
-  localStorage.removeItem("numberOfGreetings");
-  localStorage.setItem("resetSuccess", true);
-  location.reload();
 });
-// reseter.addEventListener("click", function () {
-//   alert("This reset button will clear all your data");
-//   localStorage.removeItem("numberOfGreetings");
-//   counter.innerHTML = 0;
-//   location.reload();
-//   greeter.innerHTML = "Reset Success!"
-//   greeter.classList.add("success");
-
-  
-//   setTimeout(function () {
-//     greeter.innerHTML = "";
-//   }, 3000); 
-// });
